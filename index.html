@@ -6,17 +6,45 @@
   <title>Portafolio Personal - Joan Rodriguez</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
-    Joan Rodriguez
+  <header class="site-header">
+
+    <div class="header-inner">
+      <a href="#inicio" class="logo">Joan R.</a>
+ 
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+ 
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#design-system">Design System</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+ 
+      <button id="theme-toggle" aria-label="Cambiar tema">🌓</button>
+    </div>
   </header>
 
   <main>
+    <section id="inicio" class="hero">
+      <h1>Hola, soy Joan Rodriguez</h1>
+      <p class="hero-subtitle">Ingeniero de Software | Desarrollador Full-Stack</p>
+      <p class="hero-text">Diseño y construyo interfaces web accesibles, cuidando cada detalle desde la estructura hasta la experiencia de usuario.</p>
+      <div class="hero-actions">
+        <a href="#proyectos" class="btn-primary">Ver proyectos</a>
+        <a href="#contacto" class="btn-secondary">Contactar</a>
+      </div>
+    </section>
   </main>
 
   <footer>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
