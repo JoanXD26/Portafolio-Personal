@@ -47,12 +47,29 @@ document.addEventListener("DOMContentLoaded", () => {
   applyTheme(getPreferredTheme());
 
   if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-      const isDark = root.getAttribute("data-theme") === "dark";
-      const nextTheme = isDark ? "light" : "dark";
+    themeToggle.addEventListener('click', () => {
+      // 1. Lógica del cambio de tema (lo que ya tenías)
+      const isDark = root.getAttribute('data-theme') === 'dark';
+      const nextTheme = isDark ? 'light' : 'dark';
       applyTheme(nextTheme);
       localStorage.setItem(THEME_KEY, nextTheme);
+
+      // 2. Lógica de la animación (Lo nuevo)
+      // Cambiar el icono visualmente (opcional, pero queda genial)
+      themeToggle.textContent = nextTheme === 'dark' ? '☀️' : '🌑';
+
+      // Disparar la animación CSS
+      themeToggle.classList.add('is-animating');
+
+      // Quitar la clase después de que termine la animación (300ms)
+      // para que el botón pueda volver a animarse en el siguiente clic
+      setTimeout(() => {
+        themeToggle.classList.remove('is-animating');
+      }, 300);
     });
+
+    // Asegurar que el icono coincida con el tema preferido al cargar la página inicial
+    themeToggle.textContent = getPreferredTheme() === 'dark' ? '☀️' : '🌓';
   }
 
   /* ============================================

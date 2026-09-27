@@ -347,7 +347,7 @@ a {
 .hero-subtitle {
   font-family: var(--font-heading);
   font-size: var(--fs-400);
-  color: var(--color-primary);
+  color: var(--color-accent);
   font-weight: var(--fw-semibold);
 }
 
@@ -1033,3 +1033,15 @@ body {
     transition: none;
   }
 }
+
+/* ============================================
+   17. ANIMACIÓN BOTÓN TEMA
+   ============================================ */
+   #theme-toggle {
+    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1); /* Transición suave base */
+  }
+  
+  /* Esta clase se añadirá temporalmente vía JS al hacer clic */
+  #theme-toggle.is-animating {
+    transform: rotate(360deg) scale(1.1);
+  }
