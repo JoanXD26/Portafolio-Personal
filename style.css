@@ -1006,3 +1006,30 @@ body {
   visibility: visible;
   transform: translateY(0);
 }
+
+/* ============================================
+   16. ANIMACIONES CONTROLADAS (Intersection Observer)
+   ============================================ */
+
+/* Estado inicial: Invisible y ligeramente desplazado hacia abajo */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  /* IMPORTANTE: Respeta las preferencias del usuario */
+}
+
+/* Estado final: Visible y en su posición natural (Añadido por JavaScript) */
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Manejo de Accesibilidad: Si el usuario tiene desactivadas las animaciones en su sistema operativo, los elementos se muestran directamente */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
