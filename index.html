@@ -286,6 +286,123 @@
       </div>
     </section>
 
+    <section id="design-system" class="design-system">
+      <h2>Design System / Componentes</h2>
+      <p class="section-subtitle">Documentación visual de los tokens y componentes reutilizables del sitio.</p>
+ 
+      <div class="ds-block">
+        <h3>Paleta de colores</h3>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <span class="swatch-color" style="background-color: var(--color-primary);"></span>
+            <span class="swatch-name">--color-primary</span>
+            <span class="swatch-hex">#1F6F63</span>
+          </div>
+          <div class="swatch">
+            <span class="swatch-color" style="background-color: var(--color-accent);"></span>
+            <span class="swatch-name">--color-accent</span>
+            <span class="swatch-hex">#C9A227</span>
+          </div>
+          <div class="swatch">
+            <span class="swatch-color" style="background-color: var(--color-bg);"></span>
+            <span class="swatch-name">--color-bg</span>
+            <span class="swatch-hex">#F1F0EC</span>
+          </div>
+          <div class="swatch">
+            <span class="swatch-color" style="background-color: var(--color-surface);"></span>
+            <span class="swatch-name">--color-surface</span>
+            <span class="swatch-hex">#FFFFFF</span>
+          </div>
+          <div class="swatch">
+            <span class="swatch-color" style="background-color: var(--color-text);"></span>
+            <span class="swatch-name">--color-text</span>
+            <span class="swatch-hex">#1B1C22</span>
+          </div>
+          <div class="swatch">
+            <span class="swatch-color" style="background-color: var(--color-border);"></span>
+            <span class="swatch-name">--color-border</span>
+            <span class="swatch-hex">#DDDAD2</span>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="ds-block">
+        <h3>Tipografía</h3>
+        <div class="type-demo">
+          <h1>Encabezado H1</h1>
+          <h2>Encabezado H2</h2>
+          <h3>Encabezado H3</h3>
+          <p>Texto regular: párrafo de contenido con la tipografía base del sitio.</p>
+          <p class="hero-text">Texto secundario: usado para descripciones y aclaraciones.</p>
+          <a href="#">Enlace de ejemplo</a>
+        </div>
+      </div>
+ 
+      <div class="ds-block">
+        <h3>Espaciado</h3>
+        <div class="spacing-demo">
+          <div class="spacing-row"><span class="spacing-label">--space-1</span><span class="spacing-bar" style="width: var(--space-1);"></span></div>
+          <div class="spacing-row"><span class="spacing-label">--space-2</span><span class="spacing-bar" style="width: var(--space-2);"></span></div>
+          <div class="spacing-row"><span class="spacing-label">--space-3</span><span class="spacing-bar" style="width: var(--space-3);"></span></div>
+          <div class="spacing-row"><span class="spacing-label">--space-4</span><span class="spacing-bar" style="width: var(--space-4);"></span></div>
+          <div class="spacing-row"><span class="spacing-label">--space-5</span><span class="spacing-bar" style="width: var(--space-5);"></span></div>
+          <div class="spacing-row"><span class="spacing-label">--space-6</span><span class="spacing-bar" style="width: var(--space-6);"></span></div>
+        </div>
+      </div>
+ 
+      <div class="ds-block">
+        <h3>Componentes</h3>
+ 
+        <div class="component-demo">
+          <h4>Botones</h4>
+          <div class="component-row">
+            <button class="btn-primary">Botón primario</button>
+            <button class="btn-secondary">Botón secundario</button>
+            <button class="btn-primary" disabled>Primario deshabilitado</button>
+            <button class="btn-secondary" disabled>Secundario deshabilitado</button>
+          </div>
+        </div>
+ 
+        <div class="component-demo">
+          <h4>Etiquetas (skill-badge)</h4>
+          <div class="component-row">
+            <span class="skill-badge">HTML5 <small>Avanzado</small></span>
+            <span class="skill-badge">CSS3 <small>Avanzado</small></span>
+          </div>
+        </div>
+ 
+        <div class="component-demo">
+          <h4>Campos de formulario</h4>
+          <div class="component-row component-row-stacked">
+            <label for="ds-input">Etiqueta de campo</label>
+            <input type="text" id="ds-input" name="ds-input" placeholder="Texto de ejemplo">
+            <label for="ds-textarea">Área de texto</label>
+            <textarea id="ds-textarea" name="ds-textarea" rows="3" placeholder="Mensaje de ejemplo"></textarea>
+          </div>
+        </div>
+ 
+        <div class="component-demo">
+          <h4>Card de proyecto</h4>
+          <article class="card-proyecto ds-card-sample">
+            <figure class="card-media">
+              <img src="assets/proyecto-1.jpg" alt="Miniatura de ejemplo de una card de proyecto">
+            </figure>
+            <div class="card-body">
+              <h3>Nombre del proyecto</h3>
+              <p>Breve descripción del problema que resuelve este proyecto.</p>
+              <div class="card-badges">
+                <span class="skill-badge">Tecnología</span>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a href="#">Código fuente</a>
+              <a href="#">Demo en vivo</a>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+    
     <section id="contacto" class="contact">
       <h2>Contacto</h2>
       <p class="section-subtitle contact-subtitle">
