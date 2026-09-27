@@ -294,7 +294,7 @@ a {
   display: none;
 }
 
-.nav-menu.is-open {
+.nav-menu.is-active {
   display: block;
 }
 
@@ -948,4 +948,61 @@ a {
     grid-template-columns: 160px 1fr;
     align-items: center;
   }
+}
+
+/* ============================================
+13. MODO OSCURO
+============================================ */
+[data-theme="dark"] {
+  --color-bg: #1b1c22;
+  --color-surface: #24252c;
+  --color-text: #f1f0ec;
+  --color-text-muted: #a6a8b2;
+  --color-border: #3a3b44;
+}
+
+body {
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
+}
+
+/* ============================================
+14. MENÚ MÓVIL — TRANSICIÓN
+============================================ */
+.nav-menu {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-base) ease;
+}
+
+.nav-menu.is-active {
+  max-height: 400px;
+}
+
+@media (min-width: 768px) {
+  .nav-menu {
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+/* ============================================
+15. BOTÓN VOLVER ARRIBA — VISIBILIDAD
+============================================ */
+.btn-scroll-top {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast),
+    visibility var(--transition-fast);
+}
+
+.btn-scroll-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
