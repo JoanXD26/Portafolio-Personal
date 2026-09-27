@@ -286,9 +286,57 @@
       </div>
     </section>
 
+    <section id="contacto" class="contact">
+      <h2>Contacto</h2>
+      <p class="section-subtitle contact-subtitle">
+        ¿Tienes un proyecto en mente o una oportunidad laboral? Hablemos.
+      </p>
+    
+      <form action="#" method="POST" class="form-contacto">
+        
+        <div class="form-field">
+          <label for="nombre">Nombres completos</label>
+          <input type="text" id="nombre" name="nombre" required aria-required="true" autocomplete="name" placeholder="Ej: Ana Estela Pérez García">
+          <span class="form-error" id="error-nombre" role="alert"></span>
+        </div>
+    
+        <div class="form-field">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" required aria-required="true" autocomplete="email" placeholder="ana@empresa.com">
+          <span class="form-error" id="error-correo" role="alert"></span>
+        </div>
+    
+        <div class="form-field">
+          <label for="motivo">Motivo del contacto</label>
+          <select id="motivo" name="motivo" required aria-required="true">
+            <option value="" disabled selected>Selecciona una opción...</option>
+            <option value="oferta_laboral">Oportunidad laboral / Entrevista</option>
+            <option value="freelance">Proyecto Freelance</option>
+            <option value="colaboracion">Colaboración en proyecto</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+    
+        <div class="form-field">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required aria-required="true" placeholder="Cuéntame más sobre el proyecto o vacante..."></textarea>
+          <span class="form-error" id="error-mensaje" role="alert"></span>
+        </div>
+    
+        <button type="submit" class="btn-primary">Enviar mensaje</button>
+      </form>
+    </section>
   </main>
 
   <footer>
+    <p class="footer-copy">&copy; 2026 Joan Rodriguez. Todos los derechos reservados.</p>
+ 
+    <ul class="footer-links">
+      <li><a href="https://github.com/JoanXD26" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/joanr26" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+    </ul>
+ 
+    <button id="btn-scroll-top" aria-label="Volver al inicio">↑</button>
   </footer>
 
   <script src="app.js"></script>

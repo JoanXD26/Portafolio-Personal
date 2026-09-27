@@ -656,3 +656,146 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
+
+/* ============================================
+10. CONTACTO (Mobile-First)
+============================================ */
+.contact {
+  padding: var(--space-6) var(--space-4);
+  background-color: var(--color-bg);
+}
+
+.contact h2 {
+  font-size: var(--fs-500);
+  color: var(--color-text);
+  margin-bottom: var(--space-5);
+  text-align: center;
+}
+
+.contact-subtitle {
+  text-align: center;
+  margin-bottom: var(--space-5);
+}
+
+.form-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-field label {
+  font-weight: var(--fw-medium);
+  color: var(--color-text);
+  font-size: var(--fs-300);
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  width: 100%;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--fs-300);
+}
+
+.form-field input:focus-visible,
+.form-field textarea:focus-visible,
+.form-field select:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-color: var(--color-primary);
+}
+
+.form-field input:invalid:not(:placeholder-shown),
+.form-field textarea:invalid:not(:placeholder-shown) {
+  border-color: var(--color-danger);
+}
+
+.form-error {
+  color: var(--color-danger);
+  font-size: var(--fs-200);
+  min-height: 1em;
+}
+
+.form-contacto .btn-primary {
+  align-self: flex-start;
+}
+
+/* ============================================
+11. FOOTER (Mobile-First)
+============================================ */
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-5) var(--space-4);
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.footer-copy {
+  color: var(--color-text-muted);
+  font-size: var(--fs-200);
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--space-4);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-200);
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  text-decoration: underline;
+}
+
+.footer-links a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+#btn-scroll-top {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-size: var(--fs-400);
+  line-height: 1;
+  padding: var(--space-2) var(--space-3);
+}
+
+#btn-scroll-top:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
