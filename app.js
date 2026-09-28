@@ -47,29 +47,29 @@ document.addEventListener("DOMContentLoaded", () => {
   applyTheme(getPreferredTheme());
 
   if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
+    themeToggle.addEventListener("click", () => {
       // 1. Lógica del cambio de tema (lo que ya tenías)
-      const isDark = root.getAttribute('data-theme') === 'dark';
-      const nextTheme = isDark ? 'light' : 'dark';
+      const isDark = root.getAttribute("data-theme") === "dark";
+      const nextTheme = isDark ? "light" : "dark";
       applyTheme(nextTheme);
       localStorage.setItem(THEME_KEY, nextTheme);
 
       // 2. Lógica de la animación (Lo nuevo)
       // Cambiar el icono visualmente (opcional, pero queda genial)
-      themeToggle.textContent = nextTheme === 'dark' ? '☀️' : '🌑';
+      themeToggle.textContent = nextTheme === "dark" ? "☀️" : "🌑";
 
       // Disparar la animación CSS
-      themeToggle.classList.add('is-animating');
+      themeToggle.classList.add("is-animating");
 
       // Quitar la clase después de que termine la animación (300ms)
       // para que el botón pueda volver a animarse en el siguiente clic
       setTimeout(() => {
-        themeToggle.classList.remove('is-animating');
+        themeToggle.classList.remove("is-animating");
       }, 300);
     });
 
     // Asegurar que el icono coincida con el tema preferido al cargar la página inicial
-    themeToggle.textContent = getPreferredTheme() === 'dark' ? '☀️' : '🌓';
+    themeToggle.textContent = getPreferredTheme() === "dark" ? "☀️" : "🌓";
   }
 
   /* ============================================
@@ -125,4 +125,60 @@ if ("IntersectionObserver" in window) {
   });
 } else {
   elementosAnimados.forEach((el) => el.classList.add("is-visible"));
+}
+
+/* ============================================
+4. VALIDACIÓN DE FORMULARIO DE CONTACTO 
+============================================ */
+const contactForm = document.querySelector(".form-contacto");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault(); // Detiene el envío automático para validar primero
+    let isValid = true;
+
+    // Obtener campos y contenedores de error
+    const nombreInput = document.getElementById("nombre");
+    const correoInput = document.getElementById("correo");
+    const mensajeInput = document.getElementById("mensaje");
+
+    const errorNombre = document.getElementById("error-nombre");
+    const errorCorreo = document.getElementById("error-correo");
+    const errorMensaje = document.getElementById("error-mensaje");
+
+    // Limpiar errores previos
+    errorNombre.textContent = "";
+    errorCorreo.textContent = "";
+    errorMensaje.textContent = "";
+
+    // Validar Nombre
+    if (nombreInput.value.trim() === "") {
+      errorNombre.textContent = "Por favor, ingresa tu nombre completo.";
+      isValid = false;
+    }
+
+    // Validar Correo (formato básico)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (correoInput.value.trim() === "") {
+      errorCorreo.textContent = "El correo electrónico es obligatorio.";
+      isValid = false;
+    } else if (!emailRegex.test(correoInput.value.trim())) {
+      errorCorreo.textContent =
+        "Por favor, ingresa un correo electrónico válido.";
+      isValid = false;
+    }
+
+    // Validar Mensaje
+    if (mensajeInput.value.trim() === "") {
+      errorMensaje.textContent = "El mensaje no puede estar vacío.";
+      isValid = false;
+    }
+
+    // Si todo es válido, simular envío
+    if (isValid) {
+      // Aquí iría el código para enviar los datos (ej. fetch)
+      alert("¡Mensaje enviado con éxito! (Simulación)");
+      contactForm.reset(); // Limpiar el formulario
+    }
+  });
 }

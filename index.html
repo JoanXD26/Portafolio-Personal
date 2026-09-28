@@ -4,6 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Portafolio Personal - Joan Rodriguez</title>
+
+  <!-- Metadatos SEO básicos -->
+  <meta name="description" content="Portafolio profesional de Joan Rodriguez, Ingeniero de Software y Desarrollador Full-Stack especializado en interfaces web accesibles y soluciones con Python, Django e IA.">
+  <meta name="author" content="Joan Rodriguez">
+
+  <!-- Open Graph / Compartir en LinkedIn, WhatsApp, Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Joan Rodriguez | Ingeniero de Software & Full-Stack">
+  <meta property="og:description" content="Diseño y desarrollo interfaces web modernas y accesibles, con experiencia en React, Django, bases de datos y visión por computadora.">
+  <meta property="og:url" content="https://joanxd26.github.io/">
+  <meta property="og:image" content="static/Profile.png">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,6 +27,7 @@
       <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
  
       <nav class="nav-menu">
+        
         <ul>
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#sobre-mi">Sobre mí</a></li>
@@ -23,20 +36,34 @@
           <li><a href="#design-system">Design System</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
+      
       </nav>
- 
-      <button id="theme-toggle" aria-label="Cambiar tema">🌑</button>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">🌑</button>
     </div>
   </header>
 
   <main>
     <section id="inicio" class="hero">
-      <h1>Hola, soy Joan Rodriguez</h1>
-      <p class="hero-subtitle">Ingeniero de Software | Desarrollador Full-Stack</p>
-      <p class="hero-text">Diseño y construyo interfaces web accesibles, cuidando cada detalle desde la estructura hasta la experiencia de usuario.</p>
-      <div class="hero-actions">
-        <a href="#proyectos" class="btn-primary">Ver proyectos</a>
-        <a href="#contacto" class="btn-secondary">Contactar</a>
+
+      <div class="hero-content">
+
+        <div class="hero-image-container">
+          <img src="static/Profile.png" alt="Foto de perfil de Joan Martín Rodríguez Cruz" class="hero-profile-img">
+        </div>
+
+        <div class="hero-text-content">
+          <h1>Hola, soy Joan Rodriguez</h1>
+          <p class="hero-subtitle">Ingeniero de Software | Desarrollador Full-Stack</p>
+          <p class="hero-text">Estudiante de Ingeniería de Software en la UNEMI con experiencia práctica en desarrollo web, administración de bases de datos, soporte TI y visión artificial. Enfocado en construir interfaces accesibles y soluciones de software estructuradas y eficientes.</p>
+
+          <div class="hero-actions">
+            <a href="#proyectos" class="btn-primary">Ver proyectos</a>
+            <a href="static/CV Joan Rodriguez.pdf" download="CV-Joan-Rodriguez.pdf" class="btn-secondary">
+              <span aria-hidden="true">📄</span> Descargar CV
+            </a>
+            <a href="#contacto" class="btn-secondary">Contactar</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -44,26 +71,36 @@
       <h2>Sobre mí</h2>
       <div class="about-content">
         <div class="about-text">
-          <p>-----</p>
-          <p>---------</p>
+          <p>Soy estudiante de octavo semestre de Ingeniería de Software en la <strong>Universidad Estatal de Milagro (UNEMI)</strong>, radicado en Guayaquil, Ecuador. Me especializo en el desarrollo web Full-Stack con tecnologías como Python, Django, React y SQL, complementando mis proyectos con modelos de Visión Artificial mediante OpenCV y MediaPipe.</p>
+          <p>Cuento con experiencia profesional como <strong>Ayudante de Sistemas y Soporte Técnico TI en la UNEMI</strong>, donde desarrollé software para la extracción automatizada de datos a través de DOI, gestioné repositorios, depuré bases de datos para garantizar su integridad y coordiné actividades técnicas en equipo. Asimismo, mi experiencia en logística e inventarios en <strong>Vinos dos Hemisferios (VIDOHECA)</strong> fortaleció mi disciplina operativa y resolución metódica de problemas.</p>
+          
+          <div class="about-cv">
+            <a href="static/CV Joan Rodriguez.pdf" download="CV-Joan-Rodriguez.pdf" class="btn-secondary">
+              <span aria-hidden="true">📥</span> Descargar Curriculum Vitae en PDF
+            </a>
+          </div>
         </div>
         <aside class="info-card">
           <dl>
-            <dt>Rol</dt>
-            <dd>Desarrollador/a Front-End</dd>
+            <dt>Rol Principal</dt>
+            <dd>Desarrollador Full-Stack & Soporte TI</dd>
  
             <dt>Ubicación</dt>
-            <dd>Guayaquil, Ecuador</dd>
+            <dd>Guayaquil, Guayas, Ecuador</dd>
  
-            <dt>Formación</dt>
+            <dt>Formación Académica</dt>
             <dd>Ingeniería en Software - Universidad Estatal de Milagro </dd>
+
+            <dt>Contacto Directo</dt>
+            <dd>joanrodriguezc26@gmail.com</dd>
+            <dd>+593 96 004 1214</dd>
           </dl>
         </aside>
       </div>
     </section>
  
     <section id="habilidades" class="skills">
-      <h2>Habilidades</h2>
+      <h2>Habilidades Técnicas</h2>
     
       <!-- Frontend -->
       <div class="skills-category fade-in">
@@ -108,7 +145,12 @@
           </div>
           <div class="skill-badge">
             <span class="skill-icon" aria-hidden="true">🎸</span>
-            <span class="skill-name">Django / REST</span>
+            <span class="skill-name">Django</span>
+            <small>Avanzado</small>
+          </div>
+          <div class="skill-badge">
+            <span class="skill-icon" aria-hidden="true">🔗</span>
+            <span class="skill-name">RESTful APIs</span>
             <small>Avanzado</small>
           </div>
         </div>
@@ -124,13 +166,18 @@
             <small>Intermedio</small>
           </div>
           <div class="skill-badge">
+            <span class="skill-icon" aria-hidden="true">🗄️</span>
+            <span class="skill-name">SQL Server</span>
+            <small>Avanzado</small>
+          </div>
+          <div class="skill-badge">
             <span class="skill-icon" aria-hidden="true">🍃</span>
             <span class="skill-name">MongoDB</span>
             <small>Básico</small>
           </div>
           <div class="skill-badge">
-            <span class="skill-icon" aria-hidden="true">🗄️</span>
-            <span class="skill-name">SQL Server</span>
+            <span class="skill-icon" aria-hidden="true">📊</span>
+            <span class="skill-name">SQL (Consultas & Depuración)</span>
             <small>Avanzado</small>
           </div>
         </div>
@@ -152,7 +199,12 @@
           </div>
           <div class="skill-badge">
             <span class="skill-icon" aria-hidden="true">🎯</span>
-            <span class="skill-name">Jira (Agile/Scrum)</span>
+            <span class="skill-name">Scrum / Agile (Jira)</span>
+            <small>Intermedio</small>
+          </div>
+          <div class="skill-badge">
+            <span class="skill-icon" aria-hidden="true">📈</span>
+            <span class="skill-name">Microsoft office</span>
             <small>Intermedio</small>
           </div>
         </div>
@@ -177,23 +229,23 @@
     
       <!-- Diseño -->
       <div class="skills-category fade-in">
-        <h3>Diseño</h3>
+        <h3>Diseño & Prototipado</h3>
         <div class="skills-grid">
           <div class="skill-badge">
             <span class="skill-icon" aria-hidden="true">📱</span>
             <span class="skill-name">Figma</span>
-            <small>Básico</small>
+            <small>Intermedio</small>
           </div>
         </div>
       </div>
     
-      <!-- Otras tecnologías (Machine Learning & Computer Vision) -->
+      <!-- IA & Visión Artificial -->
       <div class="skills-category fade-in">
-        <h3>Otras Tecnologías (IA & Visión)</h3>
+        <h3>Inteligencia Artificial & Visión Artificial</h3>
         <div class="skills-grid">
           <div class="skill-badge">
-            <span class="skill-icon" aria-hidden="true">🧠</span>
-            <span class="skill-name">TensorFlow / Keras</span>
+            <span class="skill-icon" aria-hidden="true">👁️</span>
+            <span class="skill-name">OpenCV</span>
             <small>Intermedio</small>
           </div>
           <div class="skill-badge">
@@ -202,13 +254,13 @@
             <small>Intermedio</small>
           </div>
           <div class="skill-badge">
-            <span class="skill-icon" aria-hidden="true">👁️</span>
-            <span class="skill-name">OpenCV</span>
+            <span class="skill-icon" aria-hidden="true">📷</span>
+            <span class="skill-name">Computer Vision</span>
             <small>Intermedio</small>
           </div>
           <div class="skill-badge">
-            <span class="skill-icon" aria-hidden="true">🤖</span>
-            <span class="skill-name">Scikit-Learn</span>
+            <span class="skill-icon" aria-hidden="true">🧠</span>
+            <span class="skill-name">Modelos ML (TensorFlow)</span>
             <small>Intermedio</small>
           </div>
         </div>
@@ -222,19 +274,19 @@
       <div class="projects-grid">
         <article class="card-proyecto fade-in">
           <figure class="card-media">
-            <img src="ruta/" alt="descripcion imagem">
+            <img src="static/SisGestionNotas.png" alt="Captura de pantalla del menú principal en consola del sistema de gestión">
           </figure>
           <div class="card-body">
-            <h3>titulo de proyecto</h3>
-            <p>descripcion</p>
+            <h3>Sistema de Gestión Académica</h3>
+            <p>Aplicación de consola desarrollada en Python para la administración integral de una institución educativa. Incluye operaciones CRUD completas para la gestión de estudiantes, profesores, asignaturas, periodos, registro de calificaciones y procesos de matriculación.</p>
             <div class="card-badges">
-              <span class="skill-badge">HTML</span>
-              <span class="skill-badge">CSS</span>
-              <span class="skill-badge">JavaScript</span>
+              <span class="skill-badge">Python</span>
+              <span class="skill-badge">CLI (Consola)</span>
+              <span class="skill-badge">POO</span>
             </div>
           </div>
           <footer class="card-footer">
-            <a href="#" target="_blank" rel="noopener noreferrer">Código fuente</a>
+            <a href="https://github.com/JoanXD26/Sistema-de-gestion-academica" target="_blank" rel="noopener noreferrer">Código fuente</a>
             <!-- Para cuando lo despliegue -->
             <!-- <a href="#" target="_blank" rel="noopener noreferrer">Enlace a la Web</a> --> 
           </footer>
@@ -242,20 +294,20 @@
  
         <article class="card-proyecto fade-in">
           <figure class="card-media">
-            <img src="ruta/" alt="descripcion imagem">
+            <img src="static/BodyScanner_IA.png" alt="Interfaz de BodyScanner IA realizando análisis de composición corporal">
           </figure>
           <div class="card-body">
             <h3>BodyScanner IA - Sistema Automatizado de Evaluación Física</h3>
-            <p>Análisis corporal con IA: sube o captura una foto de cuerpo entero para estimar porcentaje de grasa corporal usando visión por computadora y modelos entrenados.</p>
+            <p>Plataforma web basada en Django para el análisis de composición corporal. Integra <strong>MediaPipe</strong> y <strong>OpenCV</strong> para la detección precisa de puntos de referencia anatómicos, aplicando modelos predictivos con <strong>TensorFlow</strong> y <strong>Scikit-Learn</strong>.</p>
             <div class="card-badges">
-              <span class="skill-badge">Django</span>
+              <span class="skill-badge">Django 5</span>
               <span class="skill-badge">Python</span>
-              <span class="skill-badge">HTML</span>
-              <span class="skill-badge">CSS3</span>
+              <span class="skill-badge">TensorFlow</span>
+              <span class="skill-badge">MediaPipe</span>
+              <span class="skill-badge">OpenCV</span>
+              <span class="skill-badge">Scikit-Learn</span>
               <span class="skill-badge">JavaScript</span>
               <span class="skill-badge">Bootstrap</span>
-              <span class="skill-badge">Tensorflow</span>
-              <span class="skill-badge">OpenCV</span>
             </div>
           </div>
           <footer class="card-footer">
@@ -267,18 +319,20 @@
  
         <article class="card-proyecto fade-in">
           <figure class="card-media">
-            <img src="ruta/" alt="descripcion imagem">
+            <img src="static/Portafolio.png" alt="Vista previa del Portafolio Personal de Joan Rodriguez">
           </figure>
           <div class="card-body">
-            <h3>titulo de proyecto</h3>
-            <p>descripcion</p>
+            <h3>Portafolio Web Personal</h3>
+            <p>Diseño y desarrollo de un portafolio responsivo creado desde cero. Implementa un sistema de diseño propio escalable mediante CSS Custom Properties, animaciones de scroll con Intersection Observer, persistencia de tema claro/oscuro y validación de formularios interactivos usando Vanilla JavaScript.</p>
             <div class="card-badges">
+              <span class="skill-badge">HTML5</span>
+              <span class="skill-badge">CSS3</span>
               <span class="skill-badge">JavaScript</span>
-              <span class="skill-badge">MongoDB</span>
+              <span class="skill-badge">GitHub Pages</span>
             </div>
           </div>
           <footer class="card-footer">
-            <a href="#" target="_blank" rel="noopener noreferrer">Código fuente</a>
+            <a href="https://github.com/JoanXD26/Portafolio-Personal" target="_blank" rel="noopener noreferrer">Código fuente</a>
             <!-- Para cuando lo despliegue -->
             <!-- <a href="#" target="_blank" rel="noopener noreferrer">Enlace a la Web</a> --> 
           </footer>
@@ -294,32 +348,32 @@
         <h3>Paleta de colores</h3>
         <div class="swatch-grid">
           <div class="swatch">
-            <span class="swatch-color" style="background-color: var(--color-primary);"></span>
+            <span class="swatch-color swatch-color--primary"></span>
             <span class="swatch-name">--color-primary</span>
             <span class="swatch-hex">#1F6F63</span>
           </div>
           <div class="swatch">
-            <span class="swatch-color" style="background-color: var(--color-accent);"></span>
+            <span class="swatch-color swatch-color--accent"></span>
             <span class="swatch-name">--color-accent</span>
             <span class="swatch-hex">#C9A227</span>
           </div>
           <div class="swatch">
-            <span class="swatch-color" style="background-color: var(--color-bg);"></span>
+            <span class="swatch-color swatch-color--bg"></span>
             <span class="swatch-name">--color-bg</span>
             <span class="swatch-hex">#F1F0EC</span>
           </div>
           <div class="swatch">
-            <span class="swatch-color" style="background-color: var(--color-surface);"></span>
+            <span class="swatch-color swatch-color--surface"></span>
             <span class="swatch-name">--color-surface</span>
             <span class="swatch-hex">#FFFFFF</span>
           </div>
           <div class="swatch">
-            <span class="swatch-color" style="background-color: var(--color-text);"></span>
+            <span class="swatch-color swatch-color--text"></span>
             <span class="swatch-name">--color-text</span>
             <span class="swatch-hex">#1B1C22</span>
           </div>
           <div class="swatch">
-            <span class="swatch-color" style="background-color: var(--color-border);"></span>
+            <span class="swatch-color swatch-color--border"></span>
             <span class="swatch-name">--color-border</span>
             <span class="swatch-hex">#DDDAD2</span>
           </div>
@@ -341,12 +395,12 @@
       <div class="ds-block">
         <h3>Espaciado</h3>
         <div class="spacing-demo">
-          <div class="spacing-row"><span class="spacing-label">--space-1</span><span class="spacing-bar" style="width: var(--space-1);"></span></div>
-          <div class="spacing-row"><span class="spacing-label">--space-2</span><span class="spacing-bar" style="width: var(--space-2);"></span></div>
-          <div class="spacing-row"><span class="spacing-label">--space-3</span><span class="spacing-bar" style="width: var(--space-3);"></span></div>
-          <div class="spacing-row"><span class="spacing-label">--space-4</span><span class="spacing-bar" style="width: var(--space-4);"></span></div>
-          <div class="spacing-row"><span class="spacing-label">--space-5</span><span class="spacing-bar" style="width: var(--space-5);"></span></div>
-          <div class="spacing-row"><span class="spacing-label">--space-6</span><span class="spacing-bar" style="width: var(--space-6);"></span></div>
+          <div class="spacing-row"><span class="spacing-label">--space-1</span><span class="spacing-bar spacing-bar--1"></span></div>
+          <div class="spacing-row"><span class="spacing-label">--space-2</span><span class="spacing-bar spacing-bar--2"></span></div>
+          <div class="spacing-row"><span class="spacing-label">--space-3</span><span class="spacing-bar spacing-bar--3"></span></div>
+          <div class="spacing-row"><span class="spacing-label">--space-4</span><span class="spacing-bar spacing-bar--4"></span></div>
+          <div class="spacing-row"><span class="spacing-label">--space-5</span><span class="spacing-bar spacing-bar--5"></span></div>
+          <div class="spacing-row"><span class="spacing-label">--space-6</span><span class="spacing-bar spacing-bar--6"></span></div>
         </div>
       </div>
  
@@ -385,7 +439,7 @@
           <h4>Card de proyecto</h4>
           <article class="card-proyecto ds-card-sample">
             <figure class="card-media">
-              <img src="assets/proyecto-1.jpg" alt="Miniatura de ejemplo de una card de proyecto">
+              <img src="static/minEjemplo.png" alt="Miniatura de ejemplo de una card de proyecto">
             </figure>
             <div class="card-body">
               <h3>Nombre del proyecto</h3>
@@ -396,7 +450,7 @@
             </div>
             <footer class="card-footer">
               <a href="#">Código fuente</a>
-              <a href="#">Demo en vivo</a>
+              <a href="#">Enlace a la Web</a>
             </footer>
           </article>
         </div>
@@ -406,20 +460,20 @@
     <section id="contacto" class="contact">
       <h2>Contacto</h2>
       <p class="section-subtitle contact-subtitle">
-        ¿Tienes un proyecto en mente o una oportunidad laboral? Hablemos.
+        ¿Tienes una vacante laboral, proyecto freelance o propuesta de colaboración técnica? Envíame un mensaje.
       </p>
     
       <form action="#" method="POST" class="form-contacto">
         
         <div class="form-field">
           <label for="nombre">Nombres completos</label>
-          <input type="text" id="nombre" name="nombre" required aria-required="true" autocomplete="name" placeholder="Ej: Ana Estela Pérez García">
+          <input type="text" id="nombre" name="nombre" required aria-required="true" autocomplete="name" placeholder="Ej: Maitte Estela Pérez Delgado">
           <span class="form-error" id="error-nombre" role="alert"></span>
         </div>
     
         <div class="form-field">
           <label for="correo">Correo electrónico</label>
-          <input type="email" id="correo" name="correo" required aria-required="true" autocomplete="email" placeholder="ana@empresa.com">
+          <input type="email" id="correo" name="correo" required aria-required="true" autocomplete="email" placeholder="Maitte@empresa.com">
           <span class="form-error" id="error-correo" role="alert"></span>
         </div>
     
@@ -428,9 +482,9 @@
           <select id="motivo" name="motivo" required aria-required="true">
             <option value="" disabled selected>Selecciona una opción...</option>
             <option value="oferta_laboral">Oportunidad laboral / Entrevista</option>
-            <option value="freelance">Proyecto Freelance</option>
+            <option value="freelance">Proyecto de Software / Freelance</option>
             <option value="colaboracion">Colaboración en proyecto</option>
-            <option value="otro">Otro</option>
+            <option value="otro">Otro motivo</option>
           </select>
         </div>
     
@@ -445,10 +499,12 @@
     </section>
   </main>
 
-  <footer>
-    <p class="footer-copy">&copy; 2026 Joan Rodriguez. Todos los derechos reservados.</p>
+  <footer class="site-footer">
+    <p class="footer-copy">&copy; 2026 Joan Martin Rodriguez Cruz. Todos los derechos reservados.</p>
  
     <ul class="footer-links">
+      <li><a href="mailto:joanrodriguezc26@gmail.com">joanrodriguezc26@gmail.com</a></li>
+      <li><a href="tel:+593960041214">+593 96 004 1214</a></li>
       <li><a href="https://github.com/JoanXD26" target="_blank" rel="noopener noreferrer">GitHub</a></li>
       <li><a href="https://www.linkedin.com/in/joanr26" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
     </ul>
