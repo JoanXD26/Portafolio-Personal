@@ -26,11 +26,11 @@ Portafolio personal e interactivo que presenta mis proyectos destacados, habilid
 
 1. Clona el repositorio:
   ```bash
-   git clone https://github.com/usuario/nombre-del-repositorio.git
+   git clone https://github.com/JoanXD26/Portafolio-Personal.git
   ```
 2. Entra en la carpeta del proyecto:
   ```bash
-   cd nombre-del-repositorio
+   cd Portafolio-Personal
   ```
 3. Abre el proyecto en tu editor (por ejemplo, Visual Studio Code).
 4. Inicia el sitio con la extensión **Live Server**: clic derecho sobre `index.html` y selecciona **Open with Live Server**.
